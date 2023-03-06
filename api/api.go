@@ -16,24 +16,29 @@ type Artiste struct {
 	Member       []string `json:"Member"`
 }
 
-func main() {
+func ApiArtiste() []Artiste {
+	var data []Artiste
+
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	req, _ := http.NewRequest("GET", url, nil)
-	var p Artiste
 	res, _ := http.DefaultClient.Do(req)
 	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-	fmt.Println(string(body))
-	err := json.Unmarshal([]byte(url), &p)
+	body, ioutil := ioutil.ReadAll(res.Body)
+	if ioutil != nil {
+		fmt.Println("Error ioutil :", ioutil)
+	}
+	//fmt.Println(string(body))
+	err := json.Unmarshal(body, &data)
 	if err != nil {
 		fmt.Println("Error", err)
-		return
 	}
-	fmt.Println("Artiste: ", p)
+	fmt.Println("Artiste: ", data[0].CreationDate)
+	return data
 }
 
-func RecupInfoArtiste(w http.ResponseWriter, r *http.Request) {
+/*func RecupInfoArtiste(w http.ResponseWriter, r *http.Request) {
 	info := &Artiste{}
 	json.NewEncoder(w).Encode(info)
 
 }
+*/
