@@ -51,10 +51,8 @@ label, #toggle {
 }
 
 .nav ul .btn-nav:hover a {
-    background-color: white ;
 	color: #2b94e5;
 	transition: 0.3s;
-    padding: 10px;
 }
 
 .btn-logo {
@@ -72,4 +70,53 @@ footer {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    height: 300px;
+    width: 250px;
+    background-color: black;
+}
+
+.card:hover {
+    height: 400px;
+    width: 250px;
+    transition: 1.05s;
+}
+.image-card img {
+    border-radius: 150px;
+}
+
+.nom-artiste h1 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+.date h1 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+.album h1 {
+    font-size: 15px;
+    margin: 5px;
+    opacity: 0;
+}
+
+.member h1 {
+    font-size: 15px;
+    margin: 5px;
+    opacity: 1;
 }

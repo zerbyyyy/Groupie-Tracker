@@ -20,19 +20,29 @@ func ApiArtiste() []Artiste {
 	var data []Artiste
 
 	url := "https://groupietrackers.herokuapp.com/api/artists"
-	req, _ := http.NewRequest("GET", url, nil)
-	res, _ := http.DefaultClient.Do(req)
+	req, errNR := http.NewRequest("GET", url, nil)
+	if errNR != nil {
+		fmt.Println("Error Request preparation:", errNR)
+		return data
+	}
+	res, errDC := http.DefaultClient.Do(req)
+	if errDC != nil {
+		fmt.Println("Error Request send :", errDC)
+		return data
+	}
 	defer res.Body.Close()
 	body, ioutil := ioutil.ReadAll(res.Body)
 	if ioutil != nil {
 		fmt.Println("Error ioutil :", ioutil)
+		return data
 	}
 	//fmt.Println(string(body))
 	err := json.Unmarshal(body, &data)
 	if err != nil {
 		fmt.Println("Error", err)
+		return data
 	}
-	fmt.Println("Artiste: ", data[0].CreationDate)
+	//fmt.Println("Artiste: ", data)
 	return data
 }
 
