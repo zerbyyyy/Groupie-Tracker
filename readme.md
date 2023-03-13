@@ -8,24 +8,31 @@ Groupie Trackers consiste à recevoir une API donnée et à manipuler les donné
 
 Il recevra une API, qui se compose de quatre parties :
 
-Le premier, artistes, contenant des informations sur certains groupes et artistes comme leur(s) nom(s), image, en quelle année ils ont commencé leur activité, la date de leur premier album et les membres.
+1ère Partie : 
 
-Le second, lieux, consiste en leurs lieux de concert passés et/ou à venir.
+Les artistes, contenant des informations sur certains groupes et artistes comme leur(s) nom(s), image, en quelle année ils ont commencé leur activité, la date de leur premier album et les membres.
 
-Le troisième, les dates, consiste en leurs dates de concert passé et/ou à venir.
+2ème Partie :
 
-Et la dernière, la relation, fait le lien entre toutes les autres parties, artistes, dates et lieux.
+Les lieux, consiste en leurs lieux de concert passés et/ou à venir.
 
-Compte tenu de tout cela, vous devez créer un site Web convivial où vous pouvez afficher les informations sur les bandes à travers plusieurs visualisations de données (exemples : blocs, cartes, tableaux, liste, pages, graphiques, etc.). C'est à vous de décider comment vous l'afficherez.
+3ème Partie :
 
-Ce projet se concentre également sur la création d'événements/actions et sur leur visualisation.
+Les dates, consiste en leurs dates de concert passé et/ou à venir.
 
-L'événement/l'action que nous voulons que vous fassiez est appelé un appel client au serveur (client-serveur). On peut dire que c'est une fonctionnalité de votre choix qui doit déclencher une action. Cette action doit communiquer avec le serveur afin de recevoir des informations, ([request-response])(https://en.wikipedia.org/wiki/Request%E2%80%93response)
-Un événement consiste en un système qui répond à une sorte d'action déclenchée par le client, le temps ou tout autre facteur.
+4ème Partie 
+
+La relation, fait le lien entre toutes les autres parties, artistes, dates et lieux.
+
+On doit afficher L'API sur un site web en html css, qui fonctionera avec un serveur en golang qui relira le back et le front.
 
 # Auteur : 
 
 `Le Bourhis Evan` => evan.lebourhis@ynov.com
+
+# Lancement du site : 
+
+allez a la racine du fichier fait `cd main ` puis `go run main.go`
 
 # Preview
 
