@@ -32,7 +32,7 @@ On doit afficher L'API sur un site web en html css, qui fonctionera avec un serv
 
 # Lancement du site : 
 
-allez a la racine du fichier fait `cd main ` puis `go run main.go`
+allez a la racine du fichier faite `cd main ` puis `go run main.go`
 
 # Preview
 
