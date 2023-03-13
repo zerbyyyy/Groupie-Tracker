@@ -1,11 +1,8 @@
-Bienvenue Sur Groupie Tracker !
-__________________________________________________
+## Bienvenue Sur Groupie Tracker !
 
 🖥️🌐✨
 
 # Explication : 
-__________________________________________________
-
 
 # Auteur : 
 
