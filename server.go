@@ -6,11 +6,6 @@ import (
 	"text/template"
 )
 
-type API struct {
-	Artist   []Artiste
-	Relation []Relation
-}
-
 func Server() {
 	data := ApiArtiste()
 	dataFinalRecup := ApiRelation()

@@ -67,12 +67,12 @@ func ApiRelation() []Relation {
 	url := "https://groupietrackers.herokuapp.com/api/relation"
 	req, ErrorNewRequest := http.NewRequest("GET", url, nil)
 	if ErrorNewRequest != nil {
-		fmt.Println("Error Request : ", ErrorNewRequest)
+		fmt.Println("Error Request preparation: ", ErrorNewRequest)
 		return dataRelation
 	}
 	res, ErrorDC := http.DefaultClient.Do(req)
 	if ErrorDC != nil {
-		fmt.Println("Error request : ", ErrorDC)
+		fmt.Println("Error request send: ", ErrorDC)
 		return dataRelation
 	}
 	defer res.Body.Close()
