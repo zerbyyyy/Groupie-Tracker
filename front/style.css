@@ -10,6 +10,7 @@
 body {
     background-color: #ecf7ee;  
 }
+/* header */
 
 header {
     position: sticky;
@@ -67,29 +68,17 @@ a {
 
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 20px;
-    color: #ecf7ee; 
-    background-color: #8c00ff;
-}
-
+/* Artiste */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 20px;
 }
 .card {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     flex-direction: column;
     padding: 20px;
     margin: 10px;
@@ -100,10 +89,11 @@ main {
 }
 
 .card:hover {
-    height: 300px;
+    height: 500px;
     width: 250px;
     box-shadow: 0px 30px 30px rgba(0,0,0,0.2);
     border: solid #8c00ff;
+    transition: 2s;
 }
 
 img {
@@ -112,9 +102,10 @@ img {
     border: solid #8c00ff;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-img:hover{
+.card:hover #img-trans{
 transition: 5s;
 -webkit-transition: 5s;
 -moz-transition: 5s;
@@ -132,6 +123,8 @@ h1 {
     margin-top: 0;
     font-size: 20px;
 }
+
+/* Loaction */
 
 .Card-Location {
     background-color: #ecf7ee;
@@ -154,21 +147,35 @@ h1 {
     border: solid #8c00ff;
 }
 
-button {
-    margin: auto;
-    background-color: #8c00ff;
-    color:#ecf7ee;
-    border: none;
-    padding: 5px 10px;
-    font-size: 13px;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.5s;
-    display: flex;
+.album {
+    display: none;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-button:hover {
-    transform: scale(1.05);
+.member {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.card:hover #transition {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: opatransin 2s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes opatransin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

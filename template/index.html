@@ -26,17 +26,19 @@
          {{range .}}
          <div class="card">
            <div class="card-transition transition"></div>
-                <img class="image-card" src="{{.Image}}">
+                <img class="image-card" id="img-trans" src="{{.Image}}">
 
                 <h1 class="nom-artiste">{{.Name}}</h1>
             
                 <h1 class="date">{{.CreationDate}}</h1>
-
-                <h1 class="album" hidden>{{.FirstAlbum}}</h1>
+                <div id="transition" class="album" >
+                    <h1>{{.FirstAlbum}}</h1>
+                </div>
+                <div id="transition" class="member">
                 {{range .Member}}
-                    <h1 class="member" hidden>{{.}}</h1>
+                    <h1 >{{.}}</h1>
                 {{end}}
-                <!-- <button>+ D'infos</button> -->
+                </div>
             </div>
         </div>
          {{end}}

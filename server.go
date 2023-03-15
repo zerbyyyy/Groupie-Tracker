@@ -6,6 +6,11 @@ import (
 	"text/template"
 )
 
+type API struct {
+	Artist   []Artiste
+	Relation []Relation
+}
+
 func Server() {
 	data := ApiArtiste()
 	dataFinalRecup := ApiRelation()
@@ -23,7 +28,7 @@ func Server() {
 		tmpl.Execute(w, dataFinalRecup)
 	})
 
-	fmt.Println(dataFinalRecup)
+	// fmt.Println(dataFinalRecup)
 	fmt.Println("server run on http://localhost:8080/")
 
 	http.ListenAndServe(":8080", nil)

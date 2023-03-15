@@ -25,7 +25,7 @@
         <main>
         {{range .}}
             <div class="Card-Location">
-                <h1>{{.Id}}</h1>
+                <h1>{{ .Id}}</h1>
                 {{range $location, $dates := .DatesLocations}}
                     {{$location}}
                     {{range $dates}}

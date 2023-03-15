@@ -81,7 +81,7 @@ func ApiRelation() []Relation {
 		fmt.Println("Error ioutil :", ioutil)
 		return dataRelation
 	}
-	fmt.Println(string(body))
+	// fmt.Println(string(body))
 	err := json.Unmarshal(body, &dataPreRelation)
 	if err != nil {
 		fmt.Println("Error Unmarshall 2: ", err)
