@@ -124,34 +124,12 @@ h1 {
     font-size: 20px;
 }
 
-/* Loaction */
-
-.Card-Location {
-    background-color: #ecf7ee;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    color:#8c00ff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-    height: 300px;
-    width: 250px;
-}
-
-.Card-Location:hover {
-    height: 300px;
-    width: 250px;
-    box-shadow: 0px 30px 30px rgba(0,0,0,0.2);
-    border: solid #8c00ff;
-}
-
 .album {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
 }
 
 .member {
@@ -177,5 +155,28 @@ h1 {
     100% {
         opacity: 1;
     }
+}
+
+/* Loaction */
+
+.Card-Location {
+    background-color: #ecf7ee;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    color:#8c00ff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    height: 300px;
+    width: 250px;
+}
+
+.Card-Location:hover {
+    height: 300px;
+    width: 250px;
+    box-shadow: 0px 30px 30px rgba(0,0,0,0.2);
+    border: solid #8c00ff;
 }
 
